@@ -16,19 +16,6 @@ curl --location --request GET 'curl --location --request GET 'http://localhost:3
 curl --location --request GET 'http://localhost:3016/single/hi?email=as443099@gmail.com'
 
 
->> URL to add a new task: 
-
-curl --location --request POST 'http://localhost:9019/add' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "title":"task3",
-    "description": "story3",
-    "priority":"low",
-    "duration":"1 hour",
-    "status" : "completed"
-    
-}'
-
 >> URL to update the task
 
 curl --location --request PUT 'http://localhost:3016/edit/613050c7b5642fa3b56732c2' \
@@ -36,20 +23,7 @@ curl --location --request PUT 'http://localhost:3016/edit/613050c7b5642fa3b56732
 --data-raw '{
     "name": "Akash Awasthi",
     "email": "as2222@gmail.com"
-}'
-
->> URL to delete the task
-
-curl --location --request DELETE 'http://localhost:9019/delete/60fee568e097181b69675e0e' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "title":"task3",
-    "description": "story3",
-    "priority":"low",
-    "duration":"1 hour",
-    "status" : "completed"
-    
-}'
+}
 
 
 2.POSTMAN
