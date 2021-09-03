@@ -1,0 +1,63 @@
+1.DATABASE
+   -we use mongodb for storing the data.
+   -DATABASE use: todo,  command:show dbs
+   -collection use : registers, for storing task, command:db.todos.find({})
+
+2. Steps to Run:
+>> nodejs command to run : nodemon <filename>
+
+>> URL to get all tasks: 
+curl --location --request GET 'http://localhost:3016/all'
+
+>>URL for name:
+curl --location --request GET 'curl --location --request GET 'http://localhost:3016/single/hi?name=Aman%20Awassthi''
+
+>>URL for email:
+curl --location --request GET 'http://localhost:3016/single/hi?email=as443099@gmail.com'
+
+
+>> URL to add a new task: 
+
+curl --location --request POST 'http://localhost:9019/add' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "title":"task3",
+    "description": "story3",
+    "priority":"low",
+    "duration":"1 hour",
+    "status" : "completed"
+    
+}'
+
+>> URL to update the task
+
+curl --location --request PUT 'http://localhost:3016/edit/613050c7b5642fa3b56732c2' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "name": "Akash Awasthi",
+    "email": "as2222@gmail.com"
+}'
+
+>> URL to delete the task
+
+curl --location --request DELETE 'http://localhost:9019/delete/60fee568e097181b69675e0e' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "title":"task3",
+    "description": "story3",
+    "priority":"low",
+    "duration":"1 hour",
+    "status" : "completed"
+    
+}'
+
+
+2.POSTMAN
+    -use postman for running the server
+    -use methods
+        -get=to find all records present in DATABASE
+        -post=adding new records in the DATABASE
+        -put=update any records
+        -delete=for deleting the records
+
+
